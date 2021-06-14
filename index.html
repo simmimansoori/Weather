@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    
+    <div class="app">
+     <h1 class="h">Weather Status</h1>
+        <div class="searchInputBox">
+            <input type="text" id= "input-box" class="input-box"
+             placeholder="Enter city name" 
+            autocapitalize="on" autocomplete="off">
+        </div>
+        <div class="weatherBody">
+            <div class="locationdetails">
+                <div class="city" id="city">Mumbai, IN</div>
+                <div class="date" id="date"><script>
+                    let d = new Date();
+                    document.getElementById("date").innerHTML =d.getUTCFullYear();
+                </script></div>
+            </div>
+
+            <div class="weatherStatus">
+                <div class="temp" id="temp">0&deg;C</div>
+                <div class="weather" id="weather">Clear</div>
+                <div class="img" id="img"></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="
+    script.js"></script>
+</body>
+</html>
