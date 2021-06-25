@@ -23,10 +23,12 @@ function getWeatherReport(city) {
 }
 
 function showWeatherReort(weather) {
-  console.log(weather);
+  // console.log(weather);
 
   let city = document.getElementById("city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
+
+
 
   let temprature = document.getElementById("temp");
   temprature.innerHTML = `${Math.round(weather.main.temp)}&deg;C`;
@@ -34,9 +36,50 @@ function showWeatherReort(weather) {
   let weatherType = document.getElementById("weather");
   weatherType.innerText = `${weather.weather[0].main}`;
 
+
   let date = document.getElementById("date");
   let todaydate = new Date();
   date.innerText = dateManage(todaydate);
+
+  if (weatherType.textContent == 'Clouds') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/cloudy.png')";
+  }
+  else if (weatherType.textContent == 'Clear') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/clear.png')";
+  }
+  else if (weatherType.textContent == 'Rain') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/rainy.png')";
+  }
+  else if (weatherType.textContent == 'Stormy') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/storm.png')";
+  }
+  else if (weatherType.textContent == 'Wind') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/windy.png')";
+  }
+  else if (weatherType.textContent == 'Snow') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/snowy.png')";
+  }
+
+  else if (weatherType.textContent == 'Haze') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/cloudy.png')";
+  }
+  else if (weatherType.textContent == 'Drizzle') {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/rainy.png')";
+  }
+  else {
+    let head = document.getElementById("head");
+    head.style.backgroundImage = "url('icons/sunny.png')";
+  }
+
+
 }
 
 function dateManage(dateArg) {
