@@ -1,12 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@media screen and (min-width: 100px) {
+  body {
+    background-image: linear-gradient(90deg, rgb(189, 227, 236) 50%, pink 50%);
+  }
 }
 
 body {
-  background-image: url(icons/bg.jpg);
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -18,18 +18,18 @@ body {
   align-items: center;
 }
 
-.h{
-    size: 100%;
-    color: azure;
-    font-size: 2rem;
-
+.h {
+  size: 100%;
+  color: azure;
+  font-size: 2rem;
 }
-.app {
-  width: 50vh;
-  margin-top: 150px;
-  background-color: #91c788;
-  padding: 30px;
-  text-align: center;
+@media screen and (min-width: 300px) {
+  .app {
+    margin-top: 30px;
+    background-color: #91c788;
+    padding: 30px 40px;
+    text-align: center;
+  }
 }
 
 .app > * {
@@ -45,7 +45,7 @@ body {
   font-size: 1rem;
   height: 20vhx;
   border-radius: 10px;
-  padding: 0 10px;
+  padding: 0 60px;
   text-align: center;
 }
 
@@ -53,14 +53,16 @@ body {
   background-color: #ddffbc;
 }
 
-.weatherBody {
-  width: 250px;
-  color: rgb(0, 0, 0);
-  padding: 20px 20px;
-  line-height: 2rem;
-  border-radius: 10px;
-  background-color: #f5f7f4;
-  height: 30vh;
+@media screen and (min-width: 100px) {
+  .weatherBody {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    padding: 0px 0px;
+    line-height: 2rem;
+    border-radius: 10px;
+    background-color: #f5f7f4;
+    /* height: 30vh; */
+  }
 }
 
 .locationdetails {
@@ -76,4 +78,14 @@ body {
   font-size: 50pt;
   font-weight: 700;
   margin: 10px 0;
+}
+header {
+  background-image: url(icons/good-weather.png);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 100px 0px;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 40%;
 }
